@@ -45,17 +45,19 @@
                                     </view>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7zj-9M-uHq">
-                                <rect key="frame" x="107" y="764.5" width="200" height="47.5"/>
+                            <button opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7zj-9M-uHq">
+                                <rect key="frame" x="107" y="766" width="200" height="46"/>
                                 <color key="backgroundColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="upN-1C-gLp"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Start">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="28"/>
-                                </buttonConfiguration>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="lightButtonSwitch" destination="BYZ-38-t0r" eventType="touchUpInside" id="CMc-Qb-69j"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -67,6 +69,12 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7zj-9M-uHq" secondAttribute="bottom" constant="50" id="c8y-Xx-9hB"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="lightButton" destination="7zj-9M-uHq" id="vM4-UO-opY"/>
+                        <outlet property="lightGreenView" destination="0D0-Y7-wzH" id="Uyw-0O-KOb"/>
+                        <outlet property="lightRedView" destination="3MV-JF-gcc" id="uBY-sJ-YqL"/>
+                        <outlet property="lightYellowView" destination="J9R-Ik-exO" id="pDu-0U-aFA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
