@@ -8,12 +8,15 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    // MARK: - IB Outlets
     @IBOutlet var lightRedView: UIView!
     @IBOutlet var lightYellowView: UIView!
     @IBOutlet var lightGreenView: UIView!
     
-    @IBOutlet var lightButtonSwitch: UIButton!
+    @IBOutlet var lightButton: UIButton!
     
+    // MARK: - Life Cycles Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         lightRedView.layer.cornerRadius = 50
@@ -23,10 +26,29 @@ class ViewController: UIViewController {
         lightGreenView.layer.cornerRadius = 50
         lightGreenView.alpha = 0.5
         
-        lightButtonSwitch.layer.cornerRadius = 10
+        lightButton.layer.cornerRadius = 10
+    }
+    // MARK: - IB Actions
+    @IBAction func lightButtonSwitch() {
+        
+        if lightRedView.alpha == 0.5 {
+            lightRedView.alpha = 1
+            lightButton.setTitle("Next", for: .normal)
+        }
+        else if lightYellowView.alpha == 0.5 {   lightRedView.alpha = 0.5
+            lightYellowView.alpha = 1
+        }
+        else if lightGreenView.alpha == 0.5 {
+            lightYellowView.alpha = 0.5
+            lightGreenView.alpha = 1
+        }   else {
+            lightRedView.alpha = 0.5
+            lightYellowView.alpha = 0.5
+            lightGreenView.alpha = 0.5
+        }
         
     }
-
-
+    
 }
+
 
