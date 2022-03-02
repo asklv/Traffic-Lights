@@ -16,7 +16,15 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        lightRedView.layer.cornerRadius = 50
+        lightRedView.alpha = 0.5
+        lightYellowView.layer.cornerRadius = 50
+        lightYellowView.alpha = 0.5
+        lightGreenView.layer.cornerRadius = 50
+        lightGreenView.alpha = 0.5
+        
+        lightButtonSwitch.layer.cornerRadius = 10
+        
     }
 
 
